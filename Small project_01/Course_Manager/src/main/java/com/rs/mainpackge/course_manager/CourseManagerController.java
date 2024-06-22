@@ -64,9 +64,7 @@ public class CourseManagerController
         coreRadioButton.setToggleGroup(toggle);
 
         courseDetail = new ArrayList<Course>();
-
-
-    }
+        }
 
 
     @javafx.fxml.FXML
