@@ -39,11 +39,11 @@ class Child extends Parent{
         System.out.println("Good evening !!");
     }
 }
-class Child1 extends Parent{            // in child classes we have to use all abstract methods.
-    public void greet(){
-        System.out.println("I am good ");
-    }
-}
+//class Child1 extends Parent{            // in child classes we have to use all abstract methods.
+//    public void greet(){
+//        System.out.println("I am good ");
+//    }
+//}
 abstract class Child2 extends Parent{
 //    public void greet(){
 //        System.out.println("this is abstract class in site abstract class.");
@@ -55,7 +55,7 @@ public class RS_45_AbstractClass_And_AbstractMethods {
     public static void main(String[] args) {
 //        Parent p = new Parent();      // it recommend a structure to create or modify this class's methods
         Child c = new Child();
-        Child1 c1 = new Child1();
+//        Child1 c1 = new Child1();
         Child2 c2 = new Child2() {
             @Override
             void greet3() {
