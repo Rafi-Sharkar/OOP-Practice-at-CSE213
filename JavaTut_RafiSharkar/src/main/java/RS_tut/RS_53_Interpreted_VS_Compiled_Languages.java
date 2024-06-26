@@ -17,10 +17,20 @@ Interpreter                                                                     
 
 What about java?
 --> Java is hybrid (combination of both)
+
+        [filename.java]  --(compiled using javac)-->  [filename.class( byte code )]  --(can be used by java interpreter)--
+   --> A JVM(Java virtual machine) can be used to interpret this bytecode.
+   --> This bytecode can be taken to any platform(win/mac/linux)
+   --> Hence Java is platform independent (write once run everywhere)
+
+   ### in intellij it maintain all.
+
+
+
  */
 
 public class RS_53_Interpreted_VS_Compiled_Languages {
     public static void main(String[] args) {
-
+        System.out.println("Java is hybrid");
     }
 }
