@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rs.mid_autumn23.ItemViewController">
+   <children>
+      <Label layoutX="419.0" layoutY="28.0" prefHeight="17.0" prefWidth="119.0" text="Product Name" />
+      <TextField fx:id="productnameTF" layoutX="419.0" layoutY="45.0" />
+      <Label layoutX="419.0" layoutY="78.0" prefHeight="17.0" prefWidth="119.0" text="Product ID" />
+      <TextField fx:id="productidTF" layoutX="419.0" layoutY="95.0" />
+      <ComboBox fx:id="materialCB" layoutX="418.0" layoutY="146.0" prefWidth="150.0" />
+      <Label layoutX="419.0" layoutY="128.0" prefHeight="17.0" prefWidth="119.0" text="Material" />
+      <ComboBox fx:id="quantityCB" layoutX="419.0" layoutY="199.0" prefWidth="150.0" />
+      <Label layoutX="419.0" layoutY="182.0" prefHeight="17.0" prefWidth="119.0" text="Quantity" />
+      <DatePicker fx:id="dateDP" layoutX="419.0" layoutY="239.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="418.0" layoutY="298.0" mnemonicParsing="false" onAction="#onAction" prefHeight="25.0" prefWidth="150.0" text="Add Product" />
+      <TableView fx:id="fulltableTV" layoutX="21.0" layoutY="35.0" prefHeight="342.0" prefWidth="373.0">
+        <columns>
+          <TableColumn fx:id="productnameTV" prefWidth="119.33331298828125" text="Product Name" />
+          <TableColumn fx:id="idTV" prefWidth="82.00003051757812" text="ID" />
+            <TableColumn fx:id="materialTV" prefWidth="98.0" text="Material" />
+            <TableColumn fx:id="quantityTV" prefWidth="74.66668701171875" text="Quantity" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

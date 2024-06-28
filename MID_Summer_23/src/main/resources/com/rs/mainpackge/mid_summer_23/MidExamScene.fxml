@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="25.0" text="Enter Student ID:" />
+      <Label layoutX="202.0" layoutY="38.0" text="Select Course: " />
+      <Label layoutX="14.0" layoutY="112.0" prefHeight="17.0" prefWidth="103.0" text="Scholarship % ?" />
+      <Label layoutX="205.0" layoutY="72.0" text="No of Credits" />
+      <Label layoutX="203.0" layoutY="103.0" text="Select Section:" />
+      <CheckBox fx:id="hasscholarshipCheckBox" layoutX="14.0" layoutY="81.0" mnemonicParsing="false" text="Has Scholarship?" />
+      <TextField fx:id="studentidTextField" layoutX="13.0" layoutY="42.0" />
+      <TextField fx:id="scholarshipTextField" layoutX="13.0" layoutY="133.0" />
+      <ComboBox fx:id="sectionComboBox" layoutX="280.0" layoutY="99.0" prefHeight="25.0" prefWidth="57.0" />
+      <Line endX="-82.66668701171875" endY="136.0" layoutX="273.0" layoutY="34.0" startX="-82.66668701171875" startY="-18.666671752929688" />
+      <Line endX="-82.66668701171875" endY="136.0" layoutX="500.0" layoutY="33.0" startX="-82.66668701171875" startY="-18.666671752929688" />
+      <ComboBox fx:id="courseComboBox" layoutX="280.0" layoutY="34.0" prefHeight="25.0" prefWidth="121.0" />
+      <Button layoutX="429.0" layoutY="23.0" mnemonicParsing="false" onAction="#addCourse" prefHeight="63.0" prefWidth="149.0" text="Add the Course to Registation" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="429.0" layoutY="97.0" mnemonicParsing="false" onAction="#confirmRegister" prefHeight="63.0" prefWidth="149.0" text="Proceed to Register" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="creditsTextField" layoutX="280.0" layoutY="68.0" prefHeight="25.0" prefWidth="121.0" />
+   </children>
+</AnchorPane>
