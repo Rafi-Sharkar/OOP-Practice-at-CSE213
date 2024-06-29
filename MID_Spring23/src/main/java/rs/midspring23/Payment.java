@@ -1,20 +1,14 @@
 package rs.midspring23;
 
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-
 public class Payment {
-    private SimpleStringProperty productName;
-    private  SimpleDoubleProperty unitPrice;
-    private SimpleIntegerProperty quantity;
-    private SimpleDoubleProperty predefinedVat;
-    private SimpleDoubleProperty vatAmount;
-    private SimpleDoubleProperty totalAmount;
+    private String productName;
+    private  double unitPrice;
+    private int quantity;
+    private double predefinedVat;
+    private double vatAmount;
+    private double totalAmount;
 
-    public Payment(SimpleStringProperty productName, SimpleDoubleProperty unitPrice,
-                           SimpleIntegerProperty quantity, SimpleDoubleProperty predefinedVat,
-                           SimpleDoubleProperty vatAmount, SimpleDoubleProperty totalAmount) {
+    public Payment(String productName, double unitPrice, int quantity, double predefinedVat, double vatAmount, double totalAmount) {
         this.productName = productName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;
@@ -22,84 +16,59 @@ public class Payment {
         this.vatAmount = vatAmount;
         this.totalAmount = totalAmount;
     }
-    public Payment(){};
 
     public String getProductName() {
-        return productName.get();
-    }
-
-    public SimpleStringProperty productNameProperty() {
         return productName;
     }
 
     public void setProductName(String productName) {
-        this.productName.set(productName);
+        this.productName = productName;
     }
 
     public double getUnitPrice() {
-        return unitPrice.get();
-    }
-
-    public SimpleDoubleProperty unitPriceProperty() {
         return unitPrice;
     }
 
     public void setUnitPrice(double unitPrice) {
-        this.unitPrice.set(unitPrice);
+        this.unitPrice = unitPrice;
     }
 
     public int getQuantity() {
-        return quantity.get();
-    }
-
-    public SimpleIntegerProperty quantityProperty() {
         return quantity;
     }
 
     public void setQuantity(int quantity) {
-        this.quantity.set(quantity);
+        this.quantity = quantity;
     }
 
     public double getPredefinedVat() {
-        return predefinedVat.get();
-    }
-
-    public SimpleDoubleProperty predefinedVatProperty() {
         return predefinedVat;
     }
 
     public void setPredefinedVat(double predefinedVat) {
-        this.predefinedVat.set(predefinedVat);
+        this.predefinedVat = predefinedVat;
     }
 
     public double getVatAmount() {
-        return vatAmount.get();
-    }
-
-    public SimpleDoubleProperty vatAmountProperty() {
         return vatAmount;
     }
 
     public void setVatAmount(double vatAmount) {
-        this.vatAmount.set(vatAmount);
+        this.vatAmount = vatAmount;
     }
 
     public double getTotalAmount() {
-        return totalAmount.get();
-    }
-
-    public SimpleDoubleProperty totalAmountProperty() {
         return totalAmount;
     }
 
     public void setTotalAmount(double totalAmount) {
-        this.totalAmount.set(totalAmount);
+        this.totalAmount = totalAmount;
     }
 
     @Override
     public String toString() {
         return "Payment{" +
-                "productName=" + productName +
+                "productName='" + productName + '\'' +
                 ", unitPrice=" + unitPrice +
                 ", quantity=" + quantity +
                 ", predefinedVat=" + predefinedVat +
@@ -107,5 +76,4 @@ public class Payment {
                 ", totalAmount=" + totalAmount +
                 '}';
     }
-
 }
