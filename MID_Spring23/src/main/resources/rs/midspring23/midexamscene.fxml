@@ -121,12 +121,12 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label fx:id="text_LB" layoutX="472.0" layoutY="402.0" prefHeight="165.0" prefWidth="202.0" style="-fx-border-width: 2; -fx-border-color: black;">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
       <TextArea fx:id="paymentstatusTA" layoutX="96.0" layoutY="346.0" prefHeight="39.0" prefWidth="131.0" />
       <TextArea fx:id="totalpayableTA" layoutX="507.0" layoutY="345.0" prefHeight="39.0" prefWidth="131.0" />
+      <TextArea fx:id="showtotalvatamountTA" layoutX="474.0" layoutY="415.0" prefHeight="153.0" prefWidth="189.0" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextArea>
    </children>
 </AnchorPane>

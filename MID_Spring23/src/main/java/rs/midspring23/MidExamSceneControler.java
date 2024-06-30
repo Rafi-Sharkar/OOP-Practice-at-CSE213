@@ -32,8 +32,6 @@ public class MidExamSceneControler
     @javafx.fxml.FXML
     private ComboBox<Double> vatconsiderCB;
     @javafx.fxml.FXML
-    private Label text_LB;
-    @javafx.fxml.FXML
     private Label predefinedvatLB;
     @javafx.fxml.FXML
     private CheckBox usdCheckBox;
@@ -54,6 +52,8 @@ public class MidExamSceneControler
     private TextArea totalpayableTA;
     @javafx.fxml.FXML
     private TextArea paymentstatusTA;
+    @javafx.fxml.FXML
+    private TextArea showtotalvatamountTA;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -133,12 +133,26 @@ totalamountTV.setCellValueFactory(new PropertyValueFactory<Payment, SimpleDouble
         }
     }
 
-    @Deprecated
-    public void CheckOut(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void ShowTotalVatAmount(ActionEvent actionEvent) {
+        if (maxperunitproductcostTF.getText().equals("") && vatconsiderCB.getValue()==null){
+            showAlert("No value entered","Enter Vat consider value in vatconsider combo box");
+        }else {
+            showtotalvatamountTA.clear();
+            Double vc = vatconsiderCB.getValue();
+            Double maxunit = Double.valueOf(maxperunitproductcostTF.getText());
+
+            double t_VA = 0.0;
+            for ( Payment p : set){
+                if (maxunit>=p.getUnitPrice()){
+                    t_VA += p.getVatAmount();
+                }else {
+                    t_VA += 0.0;
+                }
+            double discount = t_VA*(vc/100);
+            showtotalvatamountTA.appendText("The Total Vat amount paid for the products meeting search criterion is: "+discount+" Tk");
+            }
+        }
     }
 
     @javafx.fxml.FXML
