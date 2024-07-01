@@ -144,7 +144,7 @@ totalamountTV.setCellValueFactory(new PropertyValueFactory<Payment, SimpleDouble
 
             double t_VA = 0.0;
             for ( Payment p : set){
-                if (maxunit>=p.getUnitPrice()){
+                if (maxunit<=p.getUnitPrice()){
                     t_VA += p.getVatAmount();
                 }else {
                     t_VA += 0.0;
